@@ -47,7 +47,9 @@ Això és una primera proposta dels acords d'estil, nomenclatura i organització
 
 10. [Grid](#markdown-header-grid)
 
-111. [CSS Linting](#markdown-header-css-linting)
+11. [CSS Linting](#markdown-header-css-linting)
+
+12. [Estructura dels fitxers](#markdown-estructura-dels-fitxers)
 
 ***
 
@@ -428,6 +430,61 @@ A Calidae apliquem les següents modificacions:
     "no-missing-end-of-source-newline": null
 
 Per la resta de regles, davant de qualsevol dubte la referència a seguir és la de Sass Guidelines.
+
+
+***
+[*Back to top*](#markdown-header-objectius-de-la-guia)
+
+
+***
+## Estructura dels fitxers
+
+Els arxius `.scss` començaran amb un títol i un comentari introductori de l'element que es genera. 
+
+Separarem les classes amb 2 espais i les classes anidades amb un espai.
+
+Separarem els subapartats amb 5 espais i un subtítol que indiqui el contingut del següent apartat.
+
+Les línies no superaran mai els 80 caràcters.
+
+
+    /* ==========================================================================
+    #TITOL (e.g. Media Object, Form Component, Hidden Utilities)
+    ========================================================================== */
+
+    /**
+    * Long-form comment.
+    *
+    * This spans multiple lines and is also constrained to no longer than 80
+    * characters in width.
+    *
+    * 1. Provide line-comments like this.
+    */
+
+    .class {
+        color: red; /* [1] */
+
+        > .nested-class {
+            color: blue;
+        }
+
+    }
+
+
+    .class2 {
+        ...
+    }
+
+
+
+
+
+    /* Sub-titol (e.g. "Modificadors de mida", "Modificadors de align")
+    ========================================================================== */
+
+    .class3 {
+        ...
+    }
 
 
 ***
